@@ -1,0 +1,21 @@
+<h1>Listing shoppinglists</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shoppinglists.each do |shoppinglist| %>
+  <tr>
+    <td><%= link_to 'Show', shoppinglist %></td>
+    <td><%= link_to 'Edit', edit_shoppinglist_path(shoppinglist) %></td>
+    <td><%= link_to 'Destroy', shoppinglist, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shoppinglist', new_shoppinglist_path %>
